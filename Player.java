@@ -2,6 +2,7 @@ public class Player {
 	private final String name;
 	private int points;
 	private int currentLevel;
+	private int completedLevels;
 
 	private int levelPoints;
 	private int actualI;
@@ -11,6 +12,7 @@ public class Player {
 		this.name = name;
 		points = 0;
 		currentLevel = 0;
+		completedLevels = 0;
 	}
 
 	public String getName() {
@@ -31,6 +33,14 @@ public class Player {
 
 	public int getLevelPoints() {
 		return levelPoints;
+	}
+
+	public void setCompletedLevels(int completedLevels) {
+		this.completedLevels = completedLevels;
+	}
+
+	public int getCompletedLevels() {
+		return completedLevels;
 	}
 
 	public void setActualI (int actualI) {
@@ -60,10 +70,10 @@ public class Player {
 	public void getInfo() {
 		System.out.println("Имя пользователя: " + name);
 		System.out.println("Набранные очки: " + points);
-		if (currentLevel == 0) {
+		if (completedLevels == 0) {
 			System.out.println("Не пройдено ни одного уровня");
 		} else {
-			System.out.println("Пройдено уровней: " + currentLevel);
+			System.out.println("Пройдено уровней: " + completedLevels);
 		}
 	}
 }

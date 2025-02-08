@@ -71,6 +71,7 @@ public class Actions {
 
 	private static void exitMaze(Player player) {
 		player.setPoints(player.getPoints() + player.getLevelPoints());
+		player.setCompletedLevels(player.getCompletedLevels() + 1);
 
 		System.out.println("Вы набрали " + player.getLevelPoints() + " балла(-ов)");
 		System.out.println("Выберите действие и нажмите соответствующую клавишу:");
